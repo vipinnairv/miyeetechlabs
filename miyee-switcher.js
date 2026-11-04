@@ -1,4 +1,4 @@
-/*! Miyee Tech Labs app switcher v1.1.0 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
+/*! Miyee Tech Labs app switcher v1.2.0 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
 (() => {
   "use strict";
   if (!window.customElements || customElements.get("miyee-app-switcher")) return;
@@ -22,6 +22,7 @@
     tax: '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8"/><path d="m9 17 6-6"/><circle cx="9.5" cy="11.5" r="1"/><circle cx="14.5" cy="16.5" r="1"/>',
     model: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
     learn: '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/>',
+    fit: '<path d="M3 12h4l3-7 4 14 3-7h4"/>',
     ext: '<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>'
   };
 
@@ -47,7 +48,9 @@
     { id: "model", name: "MiyeeFinModel", sub: "Valuation", tag: "Financial Modelling & Valuation", color: "#7c3aed",
       prod: GH + "MyeeFinModel/", dev: GH + "MyeeFinModel/", live: true },
     { id: "learn", name: "MiyeeLearn", sub: "Upskilling", tag: "Learn, Assess & Certify", color: "#0d9488",
-      prod: GH + "Miyeelearn/", dev: GH + "Miyeelearn/", live: true }
+      prod: GH + "Miyeelearn/", dev: GH + "Miyeelearn/", live: true },
+    { id: "fit", name: "MiyeeFit Pro", sub: "Fitness & Veg Diet", tag: "Fitness, Weight & Vegetarian Nutrition Tracker", color: "#16a34a",
+      prod: "https://miyeefitpro.miyeetechlabs.com/", dev: "https://miyeefitpro.miyeetechlabs.com/", live: true }
   ];
 
   const svg = (d, size = 20) =>
@@ -239,5 +242,5 @@ ${on ? '<span class="cur">Current</span>' : ""}<span class="nt" role="link" tabi
   }
 
   customElements.define("miyee-app-switcher", MiyeeAppSwitcher);
-  window.MiyeeAppSwitcher = { apps: APPS, version: "1.1.0" };
+  window.MiyeeAppSwitcher = { apps: APPS, version: "1.2.0" };
 })();
